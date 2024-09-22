@@ -58,6 +58,21 @@ if (orders.length > 0) {
     console.log(`Dayanna's order total is $${ordertotal.toFixed(2)}`); // Message of order total
 };
 
+// Task 5: Create a Function to Mark an Oder as Completed
+
+function completeOrder(customerName) {
+    const order = orders.find(order => order.customerName === customerName);
+    if (!order) {
+        console.log(`ERROR: ${customerName}'s order not found`); // If the order is not found, error message will display
+    }  else {
+        order.status = 'Complete';
+        console.log(`${customerName}'s order has been completed.`);
+    }    
+};
+
+completeOrder("Tamara", [{name: "Frappuccino", quantity: 3}, {name: "Latte", quantity: 1}]); // Order is not found
+completeOrder("Dayanna", [{name: "Latte", quantity: 2}, {name: "Cold Brew", quantity: 1}]); // Order has been completed
+
 
 
 
