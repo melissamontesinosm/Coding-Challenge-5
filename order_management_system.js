@@ -39,7 +39,7 @@ function placeOrder(customerName, orderedItems) {
             };
 
         orders.push(recentOrder); // Push object at the last position
-        console.log(`rder placef for ${customerName}`)
+        console.log(`Order placef for ${customerName}`)
     };
     
     placeOrder("Dayanna", [{name: "Latte", quantity: 2}, {name: "Cold Brew", quantity: 1}]); //Sample Order
